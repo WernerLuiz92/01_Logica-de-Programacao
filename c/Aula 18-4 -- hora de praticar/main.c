@@ -7,19 +7,27 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main()
 {
     int intensidade, i;
+    char repetir[3];
 
-    printf("Qual a intensidade do miado? ");
-    scanf("%d", &intensidade);
+    do {
+        printf("Qual a intensidade do miado? ");
+        scanf("%d", &intensidade);
 
-    printf("M");
-    for (i = 0; i < intensidade; i++){
-        printf("I");
-    }
-    printf("AU");
+        printf("M");
+        for (i = 0; i < intensidade; i++){
+            printf("I");
+        }
+        printf("AU\n");
+
+        printf("Deseja repetir? <SIM> ou <NAO> \n");
+        scanf("%s", &repetir);
+    } while (strcmp(&repetir, "NAO") != 0);
+
 
     return 0;
 }

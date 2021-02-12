@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1613050171 source:c:\users\prógames\documents\werner\01_logica-de-programacao\c\aula 16-2 -- while\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
