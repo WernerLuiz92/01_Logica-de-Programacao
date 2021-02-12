@@ -25,8 +25,8 @@ int main()
 
     //Emissão do cupom fiscal
     for (i = 0; i < qtdLinhas + 1; i++){
-        if (i == qtdLinhas + 1){
-            printf("Total - $.2f", total);
+        if (i == qtdLinhas){
+            printf("Total - %.2f \n\n", total);
         } else {
             switch (codigos[i]){
             case 1:
@@ -42,7 +42,7 @@ int main()
                 printf("Cafe 500g x %d - %.2f \n", quantidades[i], totalItem);
                 break;
             default:
-                printf("Código Inválido");
+                printf("Codigo Invalido. \n");
                 break;
             }
             total = total + totalItem;
