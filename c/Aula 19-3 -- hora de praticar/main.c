@@ -12,34 +12,29 @@
 
 int main()
 {
-    int fib, temp, atual, i;
+    int n, i;
 
 
     printf("Fibonacci de: ");
-    scanf("%d", &fib);
+    scanf("%d", &n);
 
-    int fibonacci[fib];
+    int fibonacci[n];
 
-    temp = 0;
-    atual = 1;
+    for (i = 0; i < n; i++){
 
-    for (i = 0; i < fib; i++){
-
-        fibonacci[i] = atual;
-
-        atual = atual + temp;
-
-        if (i == 0){
-            temp = atual;
+        if (i == 0) {
+            fibonacci[i] = 1;
+        } else if (i == 1) {
+            fibonacci[i] = fibonacci[i - 1];
         } else {
-            temp = fibonacci[i - 1];
+            fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
         }
 
     }
 
-    for (i = 0; i < fib; i++){
+    for (i = 0; i < n; i++){
         printf("%d", fibonacci[i]);
-        if (i == (fib - 1)){
+        if (i == (n - 1)){
             printf("...\n");
         } else {
             printf(", ");
