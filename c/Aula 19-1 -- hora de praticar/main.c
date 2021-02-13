@@ -13,9 +13,9 @@ int main()
     printf("Informe o fatorial desejado: ");
     scanf("%d", &f);
 
-    for (f = 1; i > 0; i--){
+    i = f;
+    for (f = 1; i > 1; i--){
         f = f * i;
-        printf("%d\n ", f);
     }
 
     printf("%d", f);
